@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="js/lib/jquery.js"></script>
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
+        <script src="js/lib/underscore.js"></script>
+        <script src="js/lib/json2.js"></script>
+        <script src="js/lib/backbone.js"></script>
+        <script src="js/main.js"></script>
+        <style>
+            #source .ui-selecting { background: #FECA40; }
+            #source .ui-selected { background: #F39814; color: white; }
+            #source .ui-selectee { color: green; }
+            #source { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+            #source li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+            #destination {border-color: red}
+        </style>
+    </head>
+    <div id="main_area"/>
+<script type="text/template" id="poll_create_view">
+    BAAAAAAAAAAAAAAAAA
+</script>
+<script type="text/template" id="poll_show_view">
+    SHOW
+</script>
+    <div id="vote">
+        <ul id="destination">
+            <li>Six</li>
+            <li>Seven</li>
+            <li>Eight</li>
+            <li>Nine</li>
+            <li>Ten</li>
+        </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <ul id="source">
+            <li><div>One</div></li>
+            <li><div>Two</div></li>
+            <li><div>Three</div></li>
+            <li><div>Four</div></li>
+            <li><div>Five</div></li>
+        </ul>
+    </div>
+    <script>
+        $('#destination').sortable({connectWith: '#source'})
+        $('#source').sortable({connectWith: '#destination'});
+    </script>
+</html>
